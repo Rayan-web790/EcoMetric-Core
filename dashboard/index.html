@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eCommerce Analytics Dashboard</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <div class="logo-icon">AG</div>
+                <span>Antigravity AI</span>
+            </div>
+            <nav>
+                <ul>
+                    <li class="active" data-section="overview"><span class="icon">📊</span> Overview</li>
+                    <li data-section="funnel"><span class="icon">🌪️</span> Funnel Analysis</li>
+                    <li data-section="segments"><span class="icon">👥</span> Segmentation</li>
+                    <li data-section="behavior"><span class="icon">🕵️</span> Behavior</li>
+                    <li data-section="reports"><span class="icon">📄</span> Reports</li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <p>October 2019 Analysis</p>
+                <div class="status-indicator">● Live Insight</div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header>
+                <div class="header-info">
+                    <h1>Dashboard Overview</h1>
+                    <p>Real-time eCommerce event analytics and behavior deep dive.</p>
+                </div>
+                <div class="header-actions">
+                    <button id="refresh-data" class="btn btn-secondary">Refresh Data</button>
+                    <div class="user-profile">SA</div>
+                </div>
+            </header>
+
+            <!-- KPI Row -->
+            <section class="kpi-grid">
+                <div class="kpi-card" id="kpi-revenue">
+                    <div class="kpi-label">Total Revenue</div>
+                    <div class="kpi-value">$0.00</div>
+                    <div class="kpi-sparkline"><canvas id="revenue-sparkline"></canvas></div>
+                </div>
+                <div class="kpi-card" id="kpi-users">
+                    <div class="kpi-label">Active Users</div>
+                    <div class="kpi-value">0</div>
+                    <div class="kpi-trend pos">+12.4%</div>
+                </div>
+                <div class="kpi-card" id="kpi-orders">
+                    <div class="kpi-label">Total Orders</div>
+                    <div class="kpi-value">0</div>
+                    <div class="kpi-trend pos">+5.2%</div>
+                </div>
+                <div class="kpi-card" id="kpi-cr">
+                    <div class="kpi-label">Conversion Rate</div>
+                    <div class="kpi-value">0.0%</div>
+                    <div class="kpi-trend neg">-0.8%</div>
+                </div>
+            </section>
+
+            <!-- Main Insights Section -->
+            <section class="content-section" id="section-overview">
+                <div class="chart-container-large">
+                    <h3>Revenue Trend (Daily)</h3>
+                    <div class="chart-wrapper">
+                        <img src="./visuals/revenue_trend.png" alt="Revenue Trend" class="static-chart">
+                    </div>
+                </div>
+                <div class="grid-2-col">
+                    <div class="chart-container">
+                        <h3>Customer Type Distribution</h3>
+                        <img src="./visuals/customer_type_dist.png" alt="Customer Type Distribution" class="static-chart">
+                    </div>
+                    <div class="chart-container">
+                        <h3>Top Product Categories</h3>
+                        <img src="./visuals/top_categories.png" alt="Top Categories" class="static-chart">
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section" id="section-funnel" style="display: none;">
+                <div class="chart-container-large">
+                    <h3>Conversion Funnel: View → Cart → Purchase</h3>
+                    <img src="./visuals/conversion_funnel.png" alt="Conversion Funnel" class="static-chart">
+                </div>
+            </section>
+
+            <section class="content-section" id="section-segments" style="display: none;">
+                <div class="grid-2-col">
+                    <div class="chart-container">
+                        <h3>RFM Segments Count</h3>
+                        <img src="./visuals/rfm_segments.png" alt="RFM Segments" class="static-chart">
+                    </div>
+                    <div class="chart-container">
+                        <h3>Revenue Contribution by Segment</h3>
+                        <img src="./visuals/revenue_by_segment.png" alt="Revenue by Segment" class="static-chart">
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section" id="section-behavior" style="display: none;">
+                <div class="grid-2-col">
+                    <div class="chart-container">
+                        <h3>Activity Heatmap (Day vs Hour)</h3>
+                        <img src="./visuals/activity_heatmap.png" alt="Activity Heatmap" class="static-chart">
+                    </div>
+                    <div class="chart-container">
+                        <h3>Duration vs Conversion Probability</h3>
+                        <img src="./visuals/duration_vs_conversion.png" alt="Session Duration" class="static-chart">
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script type="module" src="./main.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+venv/
+ENV/
+
+# Data (Ignore large CSV files)
+data/*.csv
+!data/dashboard_data.json
+ecommerce_data.csv
+
+# JS Dependencies
+node_modules/
+dashboard/node_modules/
+dist/
+dashboard/dist/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+.gemini/
