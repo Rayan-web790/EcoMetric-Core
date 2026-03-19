@@ -29,4 +29,4 @@ The e-commerce platform seeks to understand user behavior patterns to improve co
 By shifting focus from broad traffic acquisition to **top-funnel engagement** and **high-value retention**, the platform can significantly increase its ROI without increasing total ad spend.
 
 ---
-*Analysis performed by Senior Data Analyst Antigravity*
+*Analysis performed by EcoMetric Core Team*

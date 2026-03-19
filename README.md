@@ -45,4 +45,4 @@ npm run dev
 - **Conversion Peek**: Activity surges between 10 AM and 2 PM local time.
 
 ---
-*Developed by Senior Data Analyst Antigravity for Rayan-web790.*
+*Project Developed by EcoMetric Core Team for Rayan-web790.*
